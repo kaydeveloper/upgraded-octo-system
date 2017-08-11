@@ -4,7 +4,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 
 /**
  * @Description: Services & Comonents
- * @Author: Pardip Bhatti
+ * @Author: Kaydeveloper Singh
  */
 import { GpCheckTokenService } from '../../gp-shared/gp-check-token.service';
 import { GpSharedService } from '../../gp-shared/gp-shared.service';

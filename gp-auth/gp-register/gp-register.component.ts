@@ -6,7 +6,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 
 /**
  * @Description: Import service
- * @Author: Pardip Bhatti (Gagudeep)
+ * @Author: Kaydeveloper Singh (Gagudeep)
  */
 import { GpSharedService } from '../../gp-shared/gp-shared.service';
 
@@ -18,7 +18,7 @@ import { GpSharedService } from '../../gp-shared/gp-shared.service';
 export class GpRegisterComponent implements OnInit {
   /**
    * @Description: Declaration of variables
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
   gpRegisterForm: FormGroup;
   gpFormData;
@@ -33,13 +33,13 @@ export class GpRegisterComponent implements OnInit {
    * @param gpAuthService
    * @param gpRouter
    * @param gpFlashMessage
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
   constructor(titleService: Title, meta: Meta, private gpFormBuilder: FormBuilder, private gpAuthService: GpSharedService, private gpRouter: Router, private gpFlashMessage: FlashMessagesService) {
 
     /**
      * @Description: Title and meta tags for each page
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
     titleService.setTitle('GpCoders | Register');
     meta.addTags([
@@ -50,7 +50,7 @@ export class GpRegisterComponent implements OnInit {
 
     /**
      * @Description: Form Validations
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
     this.gpRegisterForm = this.gpFormBuilder.group({
       firstName: [null, Validators.required],
@@ -62,7 +62,7 @@ export class GpRegisterComponent implements OnInit {
 
   /**
    * @Description: Init before view load
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
   ngOnInit() {
     if(localStorage.getItem('gpToken')) {
@@ -72,7 +72,7 @@ export class GpRegisterComponent implements OnInit {
 
   /**
    * @Description: Authorization function
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
   gpRegister() {
 

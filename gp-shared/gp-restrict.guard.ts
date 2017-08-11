@@ -11,7 +11,7 @@ export class GpRestrictGuard implements CanActivate {
    * @Description: Router guard to protect the urls
    * @param gpRouter
    * @param gpAuth
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
   constructor(private gpRouter: Router) {}
 
@@ -21,7 +21,7 @@ export class GpRestrictGuard implements CanActivate {
 
     /**
      * @Description: Checking login from Firebase. if user is authorize then process
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
     return true;
   }

@@ -6,7 +6,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 
 /**
  * @Description: Import service
- * @Author: Pardip Bhatti (Gagudeep)
+ * @Author: Kaydeveloper Singh (Gagudeep)
  */
 import { GpSharedService } from '../../gp-shared/gp-shared.service';
 
@@ -18,7 +18,7 @@ import { GpSharedService } from '../../gp-shared/gp-shared.service';
 export class GpLoginComponent implements OnInit {
   /**
    * @Description: Declaration of variables
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     gpAuthForm: FormGroup;
     gpFormData;
@@ -33,13 +33,13 @@ export class GpLoginComponent implements OnInit {
    * @param gpAuthService
    * @param gpRouter
    * @param gpFlashMessage
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     constructor(titleService: Title, meta: Meta, private gpFormBuilder: FormBuilder, private gpAuthService: GpSharedService, private gpRouter: Router, private gpFlashMessage: FlashMessagesService) {
 
       /**
        * @Description: Title and meta tags for each page
-       * @Author: Pardip Bhatti (Gagudeep)
+       * @Author: Kaydeveloper Singh (Gagudeep)
        */
       titleService.setTitle('GpCoders | Login');
       meta.addTags([
@@ -50,7 +50,7 @@ export class GpLoginComponent implements OnInit {
 
       /**
        * @Description: Form Validations
-       * @Author: Pardip Bhatti (Gagudeep)
+       * @Author: Kaydeveloper Singh (Gagudeep)
        */
       this.gpAuthForm = this.gpFormBuilder.group({
         email: [null, Validators.required],
@@ -60,7 +60,7 @@ export class GpLoginComponent implements OnInit {
 
   /**
    * @Description: Init before view load
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     ngOnInit() {
       if(localStorage.getItem('gpToken')) {
@@ -70,7 +70,7 @@ export class GpLoginComponent implements OnInit {
 
   /**
    * @Description: Authorization function
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     gpAuthorization() {
       //@Spiner : True

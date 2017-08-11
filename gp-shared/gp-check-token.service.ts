@@ -10,7 +10,7 @@ export class GpCheckTokenService {
 
    /**
    * @Description: Variables declaration
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     // private  gpHeaders = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
     private  gpHeaders = new Headers({'Content-Type': 'application/json'});
@@ -18,13 +18,13 @@ export class GpCheckTokenService {
 
   /**
    * @Description: Constructor
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     constructor(private gpRouter: Router, private gpHttp: Http) { }
 
   /**
    * @Description: Check if token is invalid
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     gpIfTokenIsInvalid() {
         const gpToken = (localStorage.getItem('gpToken')) ? localStorage.getItem('gpToken') : 'null';
@@ -34,7 +34,7 @@ export class GpCheckTokenService {
 
     /**
    * @Description: Extracting data if not null
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     private extractData(res: Response) {
       return res.text() ? res.json() : {}; ;

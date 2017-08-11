@@ -9,7 +9,7 @@ import { GpForgotPasswordComponent } from './gp-auth/gp-forgot-password/gp-forgo
 
 /**
  * @Description: Import all custom services
- * @Author: Pardip Bhatti
+ * @Author: Kaydeveloper Singh
  */
 import { GpAuthGuard } from './gp-shared/gp-auth.guard';
 import { GpRestrictGuard } from './gp-shared/gp-restrict.guard';

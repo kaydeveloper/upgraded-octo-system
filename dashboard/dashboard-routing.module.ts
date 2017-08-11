@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 /**
  * @Description: Import all custom componentes
- * @Author: Pardip Bhatti
+ * @Author: Kaydeveloper Singh
  */
 import { DashboardComponent } from './dashboard.component';
 import { GpDashboardHomeComponent } from './gp-dashboard-home/gp-dashboard-home.component';
@@ -14,14 +14,14 @@ import { EditProfileImageComponent } from './gp-profile/edit-profile-image/edit-
 
 /**
  * @Description: Import all custom services
- * @Author: Pardip Bhatti
+ * @Author: Kaydeveloper Singh
  */
 import { GpAuthGuard } from '../gp-shared/gp-auth.guard';
 
 /**
  * @Description: Routes for dashboard
  * @type {[{path: string; component: DashboardComponent; children: [{path: string; component: GpDashboardHomeComponent},{path: string; component: GpProfileComponent; children: [{path: string; redirectTo: string; pathMatch: string},{path: string; component: ViewProfileComponent},{path: string; component: EditProfileComponent},{path: string; component: EditProfileImageComponent}]},{path: string; loadChildren: string},{path: string; loadChildren: string}]}]}
- * @Author: Pardip Bhatti
+ * @Author: Kaydeveloper Singh
  */
 
 const routes: Routes = [

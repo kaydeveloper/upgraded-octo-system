@@ -56,7 +56,7 @@ export class GpAddCategoriesComponent implements OnInit, AfterViewInit {
 
   /**
    * @Description: Creating slug for category
-   * @Author: Pardip Bhatti (Gagudeep)
+   * @Author: Kaydeveloper Singh (Gagudeep)
    */
     gpCreateSlug(gpCatTitle) {
 
@@ -72,7 +72,7 @@ export class GpAddCategoriesComponent implements OnInit, AfterViewInit {
 
     /**
      * @Description: Creating slug for category
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
       gpSaveCategory() {
       /**
@@ -101,7 +101,7 @@ export class GpAddCategoriesComponent implements OnInit, AfterViewInit {
 
      /**
      * @Description: Fetching all cats
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
       gpFetchAllCats() {
       /**
@@ -122,7 +122,7 @@ export class GpAddCategoriesComponent implements OnInit, AfterViewInit {
 
      /**
      * @Description: Remove category
-     * @Author: Pardip Bhatti (Gagudeep)
+     * @Author: Kaydeveloper Singh (Gagudeep)
      */
      gpRemoveCategory(gpCatId) {
       /**
