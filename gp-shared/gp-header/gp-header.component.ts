@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 /**
  * @Description: Import service
- * @Author: Kaydeveloper Singh (Gagudeep)
+ * @Author: Gurpreet Singh (Kaydeveloper)
  */
 import { GpSharedService } from '../gp-shared.service';
 import { GpCheckTokenService } from '../gp-check-token.service';
@@ -17,7 +17,7 @@ export class GpHeaderComponent implements OnInit {
 
   /**
    * @Description: Declaration of variables
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
    gpSingleProfile = 'users/single'   
    gpName; 
@@ -26,13 +26,13 @@ export class GpHeaderComponent implements OnInit {
    * @Description: Import all custom services
    * @param gpAuthService
    * @param gpRouter
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   constructor(private gpRouter: Router, private gpAuthService: GpSharedService, private gpCheckToken: GpCheckTokenService) { }
 
   /**
    * @Description: Init before view load
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   ngOnInit() {
     this.gpCheckToken.gpIfTokenIsInvalid().subscribe(gpTokenResponse => {
@@ -47,7 +47,7 @@ export class GpHeaderComponent implements OnInit {
 
   /**
    * @Description: Authorization function
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpGetProfile() {
       if(localStorage.getItem('gpId')) {
@@ -67,7 +67,7 @@ export class GpHeaderComponent implements OnInit {
 
   /**
    * @Description: Authorization function
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   gpAuthLogout() {
     localStorage.clear();

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 /**
  * @Description: Services & Comonents
- * @Author: Kaydeveloper Singh
+ * @Author: Gurpreet Singh
  */
 import { GpCheckTokenService } from '../../../../gp-shared/gp-check-token.service';
 import { GpSharedService } from '../../../../gp-shared/gp-shared.service';
@@ -17,7 +17,7 @@ export class GpProfileLeftBarComponent implements OnInit {
 
   /**
    * @Description: Variable declarations
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpSingleUrl = "users/single";
     gpGetProfileLoader = false;
@@ -25,18 +25,18 @@ export class GpProfileLeftBarComponent implements OnInit {
 
   /**
    * @Description: Global function
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     constructor(private gpSharedService: GpSharedService, private gpCheckToken: GpCheckTokenService, private gpRouter: Router) {}
 
   /**
    * @Description: Life cycle hook
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     ngOnInit() {
     /**
      * @Description: Check token is valid or not
-     * Author: Kaydeveloper Singh (Gagudeep)
+     * Author: Gurpreet Singh (Kaydeveloper)
      */
       this.gpCheckToken.gpIfTokenIsInvalid().subscribe(gpTokenResponse => {
         if(gpTokenResponse.title !== undefined && gpTokenResponse.title === 'notAuthorized') {
@@ -50,7 +50,7 @@ export class GpProfileLeftBarComponent implements OnInit {
 
   /**
    * @Description: Get user
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpGetUser() {
       //@Loader: true

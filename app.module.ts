@@ -16,7 +16,7 @@ import { GpSidebarComponent } from './gp-shared/gp-sidebar/gp-sidebar.component'
 
 /**
  * @Description: All services
- * @Author: Kaydeveloper Singh (Gagudeep)
+ * @Author: Gurpreet Singh (Kaydeveloper)
  */
 import { GpSharedService } from './gp-shared/gp-shared.service';
 import { GpAuthGuard } from './gp-shared/gp-auth.guard';

@@ -11,13 +11,13 @@ export class GpAuthService {
   /**
    * @Description: Global function
    * @param gpAfAuth
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     constructor(private gpAfAuth: AngularFireAuth) { }
 
   /**
    * @Description: Authorize user
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpAuthorize(gpEmail: string, gpPassword: string) {
       return new Promise((resolve, reject) => {
@@ -28,7 +28,7 @@ export class GpAuthService {
     }
   /**
    * @Description: Authorize user
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpRegister(gpEmail: string, gpPassword: string) {
       return new Promise((resolve, reject) => {
@@ -40,7 +40,7 @@ export class GpAuthService {
 
   /**
    * @Description: Check is user is logged in or not
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpIsLoggedIn() {
       return this.gpAfAuth.authState.map(auth => auth);
@@ -48,7 +48,7 @@ export class GpAuthService {
 
   /**
    * @Description: Destroy firebase auth
-   * @Author: Kaydeveloper Singh
+   * @Author: Gurpreet Singh
    */
     gpLogout() {
       return this.gpAfAuth.auth.signOut();

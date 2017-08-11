@@ -9,7 +9,7 @@ export class GpSharedService {
 
  /**
    * @Description: Variables declaration
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     // private  gpHeaders = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
     private  gpHeaders = new Headers({'Content-Type': 'application/json'});
@@ -18,13 +18,13 @@ export class GpSharedService {
 
   /**
    * @Description: Constructor
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     constructor(private gpHttp: Http) { }
 
   /**
    * @Description: Saving data to server
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpSaveData(gpData, url): Observable<any> {
       return this.gpHttp.post(`${this.gpUrl}/${url}`, JSON.stringify(gpData), { headers: this.gpHeaders })
@@ -34,7 +34,7 @@ export class GpSharedService {
 
    /**
    * @Description: Saving data to server
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpUpdateData(gpId, gpData, url): Observable<any> {
       return this.gpHttp.put(`${this.gpUrl}/${url}/${gpId}`, JSON.stringify(gpData), { headers: this.gpHeaders })
@@ -45,7 +45,7 @@ export class GpSharedService {
 
   /**
    * @Description: Get Single row
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpSingleData(gpId, url): Observable<any> {
       return this.gpHttp.get(`${this.gpUrl}/${url}/${gpId}`, { headers: this.gpHeaders })
@@ -55,7 +55,7 @@ export class GpSharedService {
 
   /**
    * @Description: Get all rows
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpAllData(url): Observable<any> {
       return this.gpHttp.get(`${this.gpUrl}/${url}`, { headers: this.gpHeaders })
@@ -65,7 +65,7 @@ export class GpSharedService {
 
   /**
    * @Description: Check if user exist
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpCheckExistData(gpData, url): Observable<any> {
       return this.gpHttp.post(`${this.gpUrl}/${url}`, gpData, { headers: this.gpHeaders })
@@ -75,7 +75,7 @@ export class GpSharedService {
 
   /**
    * @Description: Remove single row
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpRemoveSingle(gpId, url): Observable<any> {
       return this.gpHttp.delete(`${this.gpUrl}/${url}/${gpId}`, { headers: this.gpHeaders })
@@ -85,7 +85,7 @@ export class GpSharedService {
 
   /**
    * @Description: Image
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpGetImageAndFormData(params, files, url) {
       return this.gpPostImagesAndData(`${this.gpUrl}/${url}`, params, files);
@@ -94,7 +94,7 @@ export class GpSharedService {
 
   /**
    * Description: Processing image upload
-   * Author: Kaydeveloper Singh (Gagudeep)
+   * Author: Gurpreet Singh (Kaydeveloper)
    * Date: 10 July, 2017
    * Usage of file upload
 
@@ -146,7 +146,7 @@ export class GpSharedService {
 
   /**
    * @Description: Authenticating user
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpAuthenication(gpData, url): Observable<any> {
       return this.gpHttp.post(`${this.gpUrl}/${url}`, gpData, { headers: this.gpHeaders })
@@ -156,7 +156,7 @@ export class GpSharedService {
 
   /**
    * @Description: If user is logged in
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpIsLoggedIn() {
       if (localStorage.getItem('gpToken')) {
@@ -166,7 +166,7 @@ export class GpSharedService {
 
   /**
    * @Description: Destroy Auth
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     gpDestroyAuth() {
       if (localStorage.getItem('gpToken')) {
@@ -176,7 +176,7 @@ export class GpSharedService {
 
   /**
    * @Description: Extracting data if not null
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     private extractData(res: Response) {
       return res.text() ? res.json() : {}; ;
@@ -184,7 +184,7 @@ export class GpSharedService {
 
   /**
    * @Description: Handling errors
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
     private gpHandleErrors(error: any): Promise<any> {
       console.log('An error occurred', error);

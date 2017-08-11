@@ -11,7 +11,7 @@ import { GpForgotPasswordComponent } from './gp-forgot-password/gp-forgot-passwo
 
 /**
  * @Description: Import service
- * @Author: Kaydeveloper Singh (Gagudeep)
+ * @Author: Gurpreet Singh (Kaydeveloper)
  */
 import { GpAuthService } from './gp-auth.service';
 

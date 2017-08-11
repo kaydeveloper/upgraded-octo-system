@@ -10,25 +10,25 @@ export class AppComponent implements OnInit {
 
   /**
    * @Description: Declaration of variables
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   gpLoggedIn;
 
   /**
    * @Description: Global function for component
    * @param gpAuthService
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   constructor(private gpAuthService: GpSharedService) {}
 
   /**
    * @Description: Life cycle hook that load before view
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   ngOnInit() {}
   /**
    * @Description: Check if user is logged in
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   gpIsLoggedIn() {
     return this.gpAuthService.gpIsLoggedIn();

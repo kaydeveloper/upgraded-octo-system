@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 /**
  * @Description: Services
- * @Author: Kaydeveloper Singh
+ * @Author: Gurpreet Singh
  */
 import { GpCheckTokenService } from './gp-check-token.service';
 

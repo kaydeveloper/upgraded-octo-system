@@ -12,7 +12,7 @@ export class GpAuthGuard implements CanActivate {
    * @Description: Router guard to protect the urls
    * @param gpRouter
    * @param gpAuth
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   constructor(private gpRouter: Router, private gpSharedService: GpSharedService) {}
 
@@ -21,7 +21,7 @@ export class GpAuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     /**
      * @Description: Checking user is logged in
-     * @Author: Kaydeveloper Singh (Gagudeep)
+     * @Author: Gurpreet Singh (Kaydeveloper)
      */
     return this.gpSharedService.gpIsLoggedIn();
   }

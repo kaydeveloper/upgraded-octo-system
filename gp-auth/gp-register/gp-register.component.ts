@@ -6,7 +6,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 
 /**
  * @Description: Import service
- * @Author: Kaydeveloper Singh (Gagudeep)
+ * @Author: Gurpreet Singh (Kaydeveloper)
  */
 import { GpSharedService } from '../../gp-shared/gp-shared.service';
 
@@ -18,7 +18,7 @@ import { GpSharedService } from '../../gp-shared/gp-shared.service';
 export class GpRegisterComponent implements OnInit {
   /**
    * @Description: Declaration of variables
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   gpRegisterForm: FormGroup;
   gpFormData;
@@ -33,13 +33,13 @@ export class GpRegisterComponent implements OnInit {
    * @param gpAuthService
    * @param gpRouter
    * @param gpFlashMessage
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   constructor(titleService: Title, meta: Meta, private gpFormBuilder: FormBuilder, private gpAuthService: GpSharedService, private gpRouter: Router, private gpFlashMessage: FlashMessagesService) {
 
     /**
      * @Description: Title and meta tags for each page
-     * @Author: Kaydeveloper Singh (Gagudeep)
+     * @Author: Gurpreet Singh (Kaydeveloper)
      */
     titleService.setTitle('GpCoders | Register');
     meta.addTags([
@@ -50,7 +50,7 @@ export class GpRegisterComponent implements OnInit {
 
     /**
      * @Description: Form Validations
-     * @Author: Kaydeveloper Singh (Gagudeep)
+     * @Author: Gurpreet Singh (Kaydeveloper)
      */
     this.gpRegisterForm = this.gpFormBuilder.group({
       firstName: [null, Validators.required],
@@ -62,7 +62,7 @@ export class GpRegisterComponent implements OnInit {
 
   /**
    * @Description: Init before view load
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   ngOnInit() {
     if(localStorage.getItem('gpToken')) {
@@ -72,7 +72,7 @@ export class GpRegisterComponent implements OnInit {
 
   /**
    * @Description: Authorization function
-   * @Author: Kaydeveloper Singh (Gagudeep)
+   * @Author: Gurpreet Singh (Kaydeveloper)
    */
   gpRegister() {
 
