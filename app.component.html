@@ -1,0 +1,6 @@
+<div id="main-wrapper">
+  <app-gp-header *ngIf="gpIsLoggedIn()"></app-gp-header>
+  <app-gp-sidebar *ngIf="gpIsLoggedIn()"></app-gp-sidebar>
+    <router-outlet></router-outlet>
+  <app-gp-footer *ngIf="gpIsLoggedIn()"></app-gp-footer>
+</div>

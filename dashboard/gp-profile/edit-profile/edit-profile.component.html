@@ -1,0 +1,148 @@
+<div class="tab-pane" id="settings" role="tabpanel">
+  <svg *ngIf="gpGetProfileLoader" class="circular" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+    </svg>
+  <div class="card-block">
+    <form class="form-horizontal form-material" [formGroup]="gpEditProfileForm" (submit)="gpUpdateUser()">
+      <div class="form-group">
+        <label class="col-md-12">First Name</label>
+        <div class="col-md-12">
+          <input type="text" placeholder="Johnathan" class="form-control form-control-line" formControlName="firstName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Last Name</label>
+        <div class="col-md-12">
+          <input type="text" placeholder="Doe" class="form-control form-control-line" formControlName="lastName">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="example-email" class="col-md-12">Email</label>
+        <div class="col-md-12">
+          <input type="email"
+                 placeholder="johnathan@admin.com"
+                 class="form-control form-control-line"
+                 name="example-email"
+                 id="example-email"
+                 formControlName="email"
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-12">Phone No</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="123 456 7890"
+                 class="form-control form-control-line"
+                 formControlName="phone"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Skype</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="123 456 7890"
+                 class="form-control form-control-line"
+                 formControlName="skype"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Tag Line</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="I so cool"
+                 class="form-control form-control-line"
+                 formControlName="tagLine"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Address</label>
+        <div class="col-md-12">
+          <textarea
+                 placeholder="I so cool"
+                 class="form-control"
+                 formControlName="address"
+                 cols="10"
+                 rows="10"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Facebook</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="Facbook"
+                 class="form-control"
+                 formControlName="facebook"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Twitter</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="Twitter"
+                 class="form-control"
+                 formControlName="twitter"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Google</label>
+        <div class="col-md-12">
+          <input type="text"
+                 placeholder="Facbook"
+                 class="form-control"
+                 formControlName="google"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12">Longitude Latitude</label>
+        <fieldset>
+          <div class="col-md-12">
+            <input type="text"
+                   placeholder="Latitude"
+                   class="form-control"
+                   id="lat"
+                   formControlName="latitude"
+            >
+          </div>
+
+          <div class="col-md-12">
+            <input type="text"
+                   placeholder="Longitude"
+                   class="form-control"
+                   id="long"
+                   formControlName="longitude"
+            >
+          </div>
+        </fieldset>
+        <br>
+        <div class="col-md-12">
+          <a href="javascript:void(0)" class="btn btn-primary pull-right" (click)="getLocation()">
+            <span *ngIf="!findLatLong">Find</span>
+            <span *ngIf="findLatLong"><i class="fa fa-gear fa-spin" style="font-size:24px"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <button class="btn btn-success" type="submit" [disabled]="!gpEditProfileForm.valid">Update Profile</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

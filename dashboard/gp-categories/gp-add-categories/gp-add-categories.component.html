@@ -1,0 +1,139 @@
+<div class="page-wrapper" style="min-height: 341px;">
+  <!-- ============================================================== -->
+  <!-- Container fluid  -->
+  <!-- ============================================================== -->
+  <div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Categories Section</h3>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Add New Category</li>
+        </ol>
+      </div>
+      <div class="col-md-6 col-4 align-self-center">
+        <button class="right-side-toggle waves-effect waves-light btn-info btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+        <a routerLink="/dashboard/categories" class="btn pull-right hidden-sm-down btn-success">
+          <i class="mdi mdi-plus-circle"></i> View Categories
+        </a>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <!-- Row -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card card-outline-info">
+          <div class="card-header">
+            <h4 class="m-b-0 text-white">Add New Category</h4>
+          </div>
+          <div class="card-block">
+            <form [formGroup]="gpAddCategoryForm" (submit)="gpSaveCategory()">
+              <div class="form-body">
+
+                <div class="row p-t-20">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Category Name</label>
+                      <input type="text" id="firstName"
+                             class="form-control"
+                             [(ngModel)]="gpCatName"
+                             formControlName="gpCatName"
+                             (keyup)="gpCreateSlug($event.target.value)"
+                             (blur)="gpCreateSlug($event.target.value)"
+                             placeholder="Category Name"
+                      >
+                      <!--<small class="form-control-feedback"> This is inline help </small>-->
+                      </div>
+                  </div>
+                  <!--/span-->
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Category Slug</label>
+                      <input type="text" id="lastName"
+                             class="form-control"
+                             disabled="disabled"
+                             placeholder="slug"
+                             [(ngModel)]="gpCatSlug"
+                             formControlName="gpCatSlug"
+                      >
+                      <!--<small class="form-control-feedback"> This field has error. </small>-->
+                    </div>
+                  </div>
+                  <!--/span-->
+                </div>
+                <!--/row-->
+
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-success pull-right">
+                  <span *ngIf="saveCatSpinner"><i class="fa fa-gear fa-spin" style="font-size:24px"></i></span>
+                  <span *ngIf="!saveCatSpinner">Save</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card card-outline-info">
+          <div class="card-header">
+            <h4 class="m-b-0 text-white">Other Sample form</h4>
+          </div>
+          <div class="card-block">
+            <div class="table-responsive">
+              <div id="example23_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example23"></label></div>
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>Category Name</th>
+                  <th>Category Slug</th>
+                  <th>Post Count</th>
+                  <th class="text-nowrap">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let cats of gpAllCatData | paginate: { itemsPerPage: 10, currentPage: page }">
+                  <td>{{cats.gpCatName}}</td>
+                  <td>
+                    {{cats.gpCatSlug}}
+                  </td>
+                  <td>20</td>
+                  <td class="text-nowrap">
+                    <a routerLink="/dashboard/categories/edit-categories/{{cats._id}}" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                    <a href="javascript:void(0)" (click)="gpRemoveCategory(cats._id)" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                  </td>
+                </tr>
+                <tr *ngIf="gpAllCatData < 1">
+                  <td colspan="3" align="center">
+                    No Category Found.
+                  </td>
+                </tr>
+
+                </tbody>
+              </table>
+              <div class="has-text-centered">
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Row -->
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+</div>
